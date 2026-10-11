@@ -34,54 +34,8 @@
     );
     --main-gradient: linear-gradient(135deg, var(--bg-one) 0%, var(--bg-two) 50%, var(--bg-three) 100%);
     --blend-mode: normal, soft-light;
-    color-scheme: light;
 }
 
-/* Ручная тёмная тема (механический переключатель) */
-html[data-theme="dark"] {
-    --tg-theme-bg-color: #2b2b2b;
-    --tg-theme-section-bg-color: #111111;
-    --tg-theme-secondary-bg-color: #1d1d1d;
-    --tg-theme-text-color: #ffffff;
-    --tg-theme-hint-color: #7d7d7d;
-    --tg-theme-link-color: #c38e80;
-    --tg-theme-button-color: #d1816c;
-    --tg-theme-button-text-color: #ffffff;
-    --tg-theme-header-bg-color: #252524;
-    --tg-theme-accent-text-color: #d19b8d;
-    --tg-theme-section-header-text-color: #d8a593;
-    --tg-theme-subtitle-text-color: #7e7e7e;
-    --tg-theme-destructive-text-color: #ee686f;
-    --tg-theme-section-separator-color: #000000;
-    --tg-theme-bottom-bar-bg-color: #000000;
-    --tg-theme-profile-block-bg-color: var(--tg-theme-header-bg-color);
-    --tg-theme-button-profile-color: rgba(0, 0, 0, 0.3);
-
-    --bg-one: #172431;
-    --bg-two: #0E141A;
-    --bg-three: #0F171E;
-
-    --rainbow-one: #ff416c;
-    --rainbow-two: #8a2387;
-    --rainbow-three: #3a7bd5;
-
-    --tg-theme-message-bg-color-sent: var(--tg-theme-section-bg-color);
-    --tg-theme-message-bg-color-received: var(--tg-theme-bg-color);
-    --tg-theme-message-text-color: var(--tg-theme-text-color);
-    --tg-theme-icon-message-color: var(--tg-theme-accent-text-color);
-
-    --first-gradient: linear-gradient(135deg, var(--bg-one) 0%, var(--bg-two) 50%, var(--bg-three) 100%);
-    --main-gradient: linear-gradient(135deg,
-        color-mix(in srgb, var(--rainbow-one) 30%, transparent) 0%,
-        color-mix(in srgb, var(--rainbow-two) 30%, transparent) 50%,
-        color-mix(in srgb, var(--rainbow-three) 30%, transparent) 100%
-    );
-    --blend-mode: exclusion, normal;
-    color-scheme: dark;
-}
-html[data-theme="light"] {
-    color-scheme: light;
-}
 .label {
     color: var(--tg-theme-text-color);
     cursor: default;
