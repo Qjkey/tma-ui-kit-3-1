@@ -1206,7 +1206,7 @@ document.addEventListener('DOMContentLoaded', () => {
       profileModal.style.margin = margin > 0
           ? `${margin}px ${margin}px ${marginBottom}px ${margin}px`
           : '0';
-      profileModal.style.borderRadius = '27px';
+      profileModal.style.borderRadius = '27px 27px 0 0';
       profileModal.style.maxWidth = '';
       profileModal.style.width = (type === 'sheet' && narrow) ? '100%' : '';
       // Оболочка никогда не скроллится — иначе WebView роняет border-radius
@@ -1277,7 +1277,7 @@ document.addEventListener('DOMContentLoaded', () => {
       profileModal.style.height = 'auto';
       profileModal.style.maxHeight = 'none';
       profileModal.style.margin = '0';
-      profileModal.style.borderRadius = '27px';
+      profileModal.style.borderRadius = '27px 27px 0 0';
       profileModal.style.overflow = 'hidden';
       profileModal.style.overflowX = 'hidden';
       profileModal.style.overflowY = 'hidden';
