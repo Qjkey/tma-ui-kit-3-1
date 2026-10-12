@@ -1532,11 +1532,11 @@ input:focus {
     max-height: 100%;
 }
 
-/* card: с отступами, без stretch / без прокрутки; снизу место под nav bar */
+/* card: с отступами — одинаковый радиус со всех сторон; снизу место под nav bar */
 .profile-modal[data-modal="card"] {
     margin: 6px 6px calc(6px + env(safe-area-inset-bottom, 0px)) 6px;
     max-width: 450px;
-    border-radius: 27px 27px 0 0;
+    border-radius: 27px;
     max-height: calc(100% - 12px - env(safe-area-inset-bottom, 0px));
 }
 .profile-modal[data-modal="card"] > .profile-modal-scroll {
@@ -1586,12 +1586,12 @@ input:focus {
 }
 
 @media (min-width: 751px) {
-    /* На широких: у всех модалок отступ снизу (+ nav); снизу без радиуса */
+    /* На широких: у всех модалок есть отступы — радиус одинаковый со всех сторон */
     .profile-modal[data-modal="sheet"],
     .profile-modal:not([data-modal]) {
         margin: 6px 6px calc(6px + env(safe-area-inset-bottom, 0px)) 6px;
         max-width: 450px;
-        border-radius: 27px 27px 0 0;
+        border-radius: 27px;
         max-height: calc(100% - 12px - env(safe-area-inset-bottom, 0px));
     }
 }

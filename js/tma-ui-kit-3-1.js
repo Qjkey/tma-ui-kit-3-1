@@ -1206,7 +1206,8 @@ document.addEventListener('DOMContentLoaded', () => {
       profileModal.style.margin = margin > 0
           ? `${margin}px ${margin}px ${marginBottom}px ${margin}px`
           : '0';
-      profileModal.style.borderRadius = '27px 27px 0 0';
+      /* С отступами — радиус везде; без отступов — снизу 0 */
+      profileModal.style.borderRadius = margin > 0 ? '27px' : '27px 27px 0 0';
       profileModal.style.maxWidth = '';
       profileModal.style.width = (type === 'sheet' && narrow) ? '100%' : '';
       // Оболочка никогда не скроллится — иначе WebView роняет border-radius
@@ -1277,7 +1278,8 @@ document.addEventListener('DOMContentLoaded', () => {
       profileModal.style.height = 'auto';
       profileModal.style.maxHeight = 'none';
       profileModal.style.margin = '0';
-      profileModal.style.borderRadius = '27px 27px 0 0';
+      const hasInsets = type === 'card' || !narrow;
+      profileModal.style.borderRadius = hasInsets ? '27px' : '27px 27px 0 0';
       profileModal.style.overflow = 'hidden';
       profileModal.style.overflowX = 'hidden';
       profileModal.style.overflowY = 'hidden';
@@ -1286,7 +1288,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const canScroll = type === 'sheet' && atFull;
       scrollBody.style.overflowY = canScroll ? 'auto' : 'hidden';
 
-      if (type === 'card' || !narrow) {
+      if (hasInsets) {
           // card везде + любой modal на широком: поля; снизу + safe-area под nav bar
           const inset = MARGIN_CARD;
           const insetBottom = MARGIN_CARD + getSafeAreaBottom();
